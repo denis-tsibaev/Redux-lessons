@@ -1,5 +1,13 @@
+import { Cart } from './Shop/Cart.jsx';
+import { Catalog } from './Shop/Catalog.jsx';
+
 function App() {
-    return <div className="App">999</div>;
+    return (
+        <>
+            <Catalog />
+            <Cart />
+        </>
+    );
 }
 
 export default App;
