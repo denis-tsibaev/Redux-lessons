@@ -7,11 +7,11 @@ export const Catalog = () => {
     console.log(catalogitems);
     return (
         <div>
-            <ol className="catalog">
+            <ul className="catalog">
                 {catalogitems?.map(card => (
                     <Card className="catalog-item" item={card} />
                 ))}
-            </ol>
+            </ul>
         </div>
     );
 };
