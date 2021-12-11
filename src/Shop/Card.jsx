@@ -1,9 +1,13 @@
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/actions';
+import { addToCart, removeFromCatalog } from '../redux/actions';
 
 export const Card = ({ item = {}, className }) => {
     const dispatch = useDispatch();
     const { id, name, description, price } = item;
+    const _removeFromCatalog = () => {
+        dispatch(removeFromCatalog(id));
+    };
+
     const _addToCart = () => {
         dispatch(addToCart(item));
     };
@@ -16,6 +20,7 @@ export const Card = ({ item = {}, className }) => {
                 {price}
             </p>
             <button onClick={_addToCart}>Add to cart</button>
+            <button onClick={_removeFromCatalog}>Remove this good</button>
         </li>
     );
 };
