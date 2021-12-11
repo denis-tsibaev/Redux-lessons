@@ -3,6 +3,6 @@ import { removeFromCatalog } from './actions';
 import catalogItems from './catalogItems';
 
 export const catalogitemsReducer = createReducer(catalogItems, {
-    [removeFromCatalog]: (state, action) =>
-        state.filter(el => el.id !== action.payload),
+    [removeFromCatalog]: (state, { payload }) =>
+        state.filter(el => el.id !== payload),
 });

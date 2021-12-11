@@ -4,8 +4,8 @@ import { Catalog } from './Shop/Catalog.jsx';
 function App() {
     return (
         <>
-            <Catalog />
             <Cart />
+            <Catalog />
         </>
     );
 }
